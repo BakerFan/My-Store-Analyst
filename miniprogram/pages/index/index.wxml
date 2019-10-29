@@ -1,6 +1,6 @@
 <cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
 <view slot="backText">返回</view>
-  <view slot="content">ColorUI 空白模板</view>
+  <view slot="content">My Store Analyst</view>
 </cu-custom>
 <view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
   <view class="flex justify-center">
@@ -22,8 +22,28 @@
   </view>
 </view>
 <view class="padding-sm">
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">加载中</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl bg-black flex-sub radius shadow-lg">
+    <image src="https://image.weilanwl.com/gif/loading-black.gif" mode="aspectFit" class="gif-black response" style="height:240rpx"></image>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+
+      </view>
+    </view>
+  </view>
+</view>
   <view class="flex flex-wrap justify-around">
-    <button class="cu-btn bg-pink animation-{{animation=='fade'?'fade':''}} shadow round " data-class="fade">
+    <button class="cu-btn bg-pink animation-{{animation=='fades'?'fade':''}} shadow round animation-reverse" data-class="fades" data-target="DialogModal1" bindtap="toggle">
     <text class="cuIcon-writefill"></text>
     <text>进货登记</text>
     </button>
