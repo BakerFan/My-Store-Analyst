@@ -1,0 +1,15 @@
+/**index.wxss**/
+.butStyle {
+  position: absolute;
+  top: 22%;
+  left: 36%;
+  width: 20%;
+  height: 10%;
+}
+
+.select {
+  position: absolute;
+  width: 60%;
+  height: 30%;
+  left: 20%;
+}

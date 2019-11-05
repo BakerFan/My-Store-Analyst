@@ -1,0 +1,11 @@
+<!--index.wxml-->
+
+<view class="select">
+   <text>请选择起始日期：</text>
+   <Select prop-array='{{selectArray_1}}' bind:myget='getDate_1'></Select>
+   <text>请选择截止日期：</text>
+   <Select prop-array='{{selectArray_2}}' bind:myget='getDate_2'></Select>
+</view>
+<view class="butStyle">
+    <button bindtap="jumpTo">确定</button>
+</view>
