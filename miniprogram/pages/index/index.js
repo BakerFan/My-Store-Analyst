@@ -10,40 +10,61 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    list: [{
-      name: 'fade',
-      color: 'red'
-    },
-    {
-      name: 'scale-up',
-      color: 'orange'
-    },
-    {
-      name: 'scale-down',
-      color: 'olive'
-    },
-    {
-      name: 'slide-top',
-      color: 'green'
+
+
+
+    cardCur: 0,
+    swiperList: [{
+      id: 0,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg'
     }, {
-      name: 'slide-bottom',
-      color: 'cyan'
-    },
-    {
-      name: 'slide-left',
-      color: 'blue'
-    },
-    {
-      name: 'slide-right',
-      color: 'purple'
-    },
-    {
-      name: 'shake',
-      color: 'mauve'
-    }
-    ],
-    toggleDelay: false
+      id: 1,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84001.jpg',
+    }, {
+      id: 2,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
+    }, {
+      id: 3,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
+    }, {
+      id: 4,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big25011.jpg'
+    }, {
+      id: 5,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big21016.jpg'
+    }, {
+      id: 6,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
+    }],
+
+
   },
+
+
+  toggle(e) {
+    console.log(e);
+    var anmiaton = e.currentTarget.dataset.class;
+    var that = this;
+    that.setData({
+      animation: anmiaton
+    })
+    setTimeout(function () {
+      that.setData({
+        animation: ''
+      })
+    }, 1000)
+  },
+
+
+
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -78,17 +99,50 @@ Page({
       })
     }
   },
-  toggle(e) {
+  qujinhuo:function(e) {
     console.log(e);
-    var anmiaton = e.currentTarget.dataset.class;
+    var anmiaton1 = e.currentTarget.dataset.class;
     var that = this;
     that.setData({
-      animation: anmiaton
+      animation: anmiaton1
     })
     setTimeout(function () {
       that.setData({
         animation: ''
       })
     }, 1000)
-  }
+
+    wx.navigateTo({
+      url: '/pages/jinhuo/jinhuo',
+    })
+  },
+
+
+  xiaoshouchaxun: function (e) {
+    console.log(e);
+    var anmiaton2 = e.currentTarget.dataset.class;
+    var that = this;
+    that.setData({
+      animation: anmiaton2
+    })
+    setTimeout(function () {
+      that.setData({
+        animation: ''
+      })
+    }, 1000)
+    wx.navigateTo({
+      url: '/pages/xiaoshou/xiaoshou',
+    })
+    
+  },
+
+  cardSwiper(e) {
+    this.setData({
+      cardCur: e.detail.current
+    })
+  },
+
+
+
+
 })

@@ -44,12 +44,15 @@ page {
 	--brownLight: #ede1d9;
 	--greyLight: #e7ebed;
 	/* 渐变色 */
-	--gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
+	--gradualRed: linear-gradient(45deg,#fef2ce, #ec008c);
 	--gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
 	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
 	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
 	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
 	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
+  --gradualcyanBlue: linear-gradient(45deg, #1cbbb4,#d2f1f0);
+  
+
 	/* 阴影透明色 */
 	--ShadowSize: 6rpx 6rpx 8rpx;
 	--redShadow: rgba(204, 69, 59, 0.2);
@@ -2012,7 +2015,7 @@ button.icon.lg {
 
 .cu-timeline {
 	display: block;
-	background-color: var(--white);
+	background-color: var(--yellowLight);
 }
 
 .cu-timeline .cu-time {
@@ -3046,7 +3049,7 @@ scroll-view.cu-steps .cu-item {
 }
 
 .margin-xl {
-	margin: 50rpx;
+	margin: 200rpx;
 }
 
 .margin-top-xs {
@@ -3188,7 +3191,7 @@ scroll-view.cu-steps .cu-item {
 }
 
 .padding-sm {
-	padding: 20rpx;
+	padding: 30rpx;
 }
 
 .padding {

@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/jinhuo/jinhuo",
+    "pages/xiaoshou/xiaoshou",
+    "pages/xiaoshoujilu/xiaoshoujilu",
+    "pages/tongjifenxi/tongjifenxi"
   ],
   "window": {
     "backgroundTextStyle": "light",

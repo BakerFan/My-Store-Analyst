@@ -1,0 +1,192 @@
+<cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
+<view slot="backText">返回</view>
+  <view slot="content">进货登记</view>
+</cu-custom>
+
+<scroll-view style="height:{{height}}px" scroll-into-view="{{target}}" scroll-with-animation='true' scroll-y='{{scroll}}'>
+
+  <!--介绍-->
+  <view id="introduce" class="classname" style="height: {{height*0.75}}px;width:100%;background-color: #eee;" bindtouchstart="moveStartOne" bindtouchend="moveEndOne">
+    <image src="/images/background2.jpg" style="height: {{height*0.75}}px; width: 100%;" mode="scaleToFill"></image>
+  </view>
+
+  <!--服务流程-->
+  <view id="workFlow" style="height: {{height*0.18}}px;">
+    <view class="pro-title">进货流程</view>
+    <view class='process'>
+      <view class="pro-item" bindtap="stepOneHandle">
+        <image class='item-img' src="/images/rsmj_{{stepOne?'l':'h'}}.png"></image>
+        <text class='{{stepOne?"item-textl":"item-texth"}}'>商品名称</text>
+      </view>
+      <view class="pro-arrow" style='right:10rpx;'></view>
+      <view class="pro-item" bindtap="stepTwoHandle">
+        <image class='item-img' style='width:80rpx;' src="/images/jthx_{{stepTwo?'l':'h'}}.png"></image>
+        <text class='{{stepTwo?"item-textl":"item-texth"}}'>商品数目</text>
+      </view>
+      <view class="pro-arrow"></view>
+      <view class="pro-item" bindtap="stepThreeHandle">
+        <image class='item-img' src="/images/jtys_{{stepThree?'l':'h'}}.png"></image>
+        <text class='{{stepThree?"item-textl":"item-texth"}}'>商品单价</text>
+      </view>
+      <view class="pro-arrow"></view>
+      <view class="pro-item">
+        <image class='item-img' src="/images/jl.png"></image>
+        <text class='item-texth'>完成进货</text>
+      </view>
+    </view>
+  </view>
+
+  <!--商品名称-->
+  <view wx:if="{{stepOne==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;" >
+    <view style="height: {{height*0.8*0.3}}px; background-color: #eee;">
+
+      <image src="/images/background3.jpg" style="height: 100%; width: 100%;"></image>
+      <view style="height:{{height*0.8*0.1}}px; width: 70%;background-color: white;margin: auto auto; margin-top: -{{height*0.8*0.1*1.2}}px;z-index: 1; color: #2fcabb;display: flex;align-items: center;justify-content: center;border-radius: 5px;position:relative;z-index:1;">请输入商品名称</view>
+    </view>
+
+    <view style="height:{{height*0.6*0.2}}px; width: 70%;background-color: white;margin: auto auto;margin-top:25px;border-radius: 5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+
+   
+    <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
+    <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+      
+    </view>
+    
+
+    </view>
+
+    <view class="padding-sm">
+       <view class="padding flex flex-direction">
+          <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round "  data-class="fade" bindtap="stepTwoHandle">
+              <text class="cuIcon-right"></text>
+              <text>下一步</text>
+           </button>
+         </view>
+    </view>
+  
+  </view>
+
+
+
+
+  <!--进货数量-->
+  <view wx:if="{{stepTwo==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;" >
+  <view style="height: {{height*0.8*0.3}}px; background-color: #eee;">
+
+      <image src="/images/bg4.jpg" style="height: 100%; width: 100%;"></image>
+      <view style="height:{{height*0.8*0.1}}px; width: 70%;background-color: white;margin: auto auto; margin-top: -{{height*0.8*0.1*1.2}}px;z-index: 1; color: #2fcabb;display: flex;align-items: center;justify-content: center;border-radius: 5px;position:relative;z-index:1;">请输入进货数量</view>
+    </view>
+
+    <view style="height:{{height*0.6*0.2}}px; width: 70%;background-color: white;margin: auto auto;margin-top:25px;border-radius: 5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+
+    <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
+    <input class="weui-input" type="number" placeholder="这是一个数字输入框" />
+    </view>
+    </view>
+
+
+    <view class="padding-sm">
+       <view class="padding flex flex-direction">
+          <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round "  data-class="fade" bindtap="stepThreeHandle">
+              <text class="cuIcon-right"></text>
+              <text>下一步</text>
+           </button>
+         </view>
+    </view>
+  </view>
+
+
+
+
+
+  <!--商品单价-->
+  <view wx:if="{{stepThree==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;" >
+    <view style="height: {{height*0.8*0.3}}px; background-color: #eee;">
+
+      <image src="/images/bg5.jpg" style="height: 100%; width: 100%;"></image>
+      <view style="height:{{height*0.8*0.1}}px; width: 70%;background-color: white;margin: auto auto; margin-top: -{{height*0.8*0.1*1.2}}px;z-index: 1; color: #2fcabb;display: flex;align-items: center;justify-content: center;border-radius: 5px;position:relative;z-index:1;">请输入商品单价</view>
+    </view>
+
+    <view style="height:{{height*0.6*0.2}}px; width: 70%;background-color: white;margin: auto auto;margin-top:25px;border-radius: 5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+
+    <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
+     
+    <input class="weui-input" type="digit" placeholder="带小数点的数字键盘"/>
+      
+    </view>
+    </view>
+    
+    
+
+
+  <view class="padding-sm">
+       <view class="padding flex flex-direction">
+          <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round "  data-class="fade" bindtap="querenjinhuo" data-target="DialogModal1">
+            
+              <text>确认进货</text>
+           </button>
+         </view>
+  </view>
+
+
+
+  <view class="padding-sm">
+       <view class="padding flex flex-direction">
+          <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round "  data-class="fade" bindtap="quxiaojinhuo">
+            
+              <text>取消进货</text>
+           </button>
+         </view>
+  </view>
+
+
+  </view>
+
+</scroll-view>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+
+    <view class="cu-bar bg-gradual-red justify-end">
+      <view class="content">{{gifTitle}}</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+
+
+    <view class="padding-xl">
+      <image src="https://image.weilanwl.com/gif/rhomb-white.gif" mode="aspectFit" class="gif-white response" style="height:240rpx"></image>
+    </view>
+    
+
+
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        
+        
+
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view wx:if="{{stepFour==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;" >
+  <view style="height: {{height*0.8*0.3}}px; background-color: #eee;">
+
+      <image src="/images/bg4.jpg" style="height: 100%; width: 100%;"></image>
+      <view style="height:{{height*0.8*0.1}}px; width: 70%;background-color: white;margin: auto auto; margin-top: -{{height*0.8*0.1*1.2}}px;z-index: 1; color: #2fcabb;display: flex;align-items: center;justify-content: center;border-radius: 5px;position:relative;z-index:1;">进货成功！</view>
+    </view>
+
+    <view style="height:{{height*0.6*0.2}}px; width: 70%;background-color: white;margin: auto auto;margin-top:25px;border-radius: 5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+
+    <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
+    
+    </view>
+    </view>
+
+
+    
+  </view>
