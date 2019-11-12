@@ -130,20 +130,16 @@ Page({
     this.setData({
       modalName: e.currentTarget.dataset.target
     })
-
-    setTimeout(function () {
-      this.setData({
-        modalName: null,
-      })
-    }.bind(this), 3000)
-
+   
+  
+   
     wx.navigateTo({
       url: '/pages/index/index',
     })
-    
+
+      
   },
 
-  
 
 
 
