@@ -1,5 +1,5 @@
 <cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
-<view slot="backText">返回</view>
+  <view slot="backText">返回</view>
   <view slot="content">进货登记</view>
 </cu-custom>
 
@@ -37,7 +37,7 @@
   </view>
 
   <!--商品名称-->
-  <view wx:if="{{stepOne==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;" >
+  <view wx:if="{{stepOne==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;">
     <view style="height: {{height*0.8*0.3}}px; background-color: #eee;">
 
       <image src="/images/background3.jpg" style="height: 100%; width: 100%;"></image>
@@ -46,32 +46,32 @@
 
     <view style="height:{{height*0.6*0.2}}px; width: 70%;background-color: white;margin: auto auto;margin-top:25px;border-radius: 5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
 
-   
-    <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
-    <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中"/>
-      
-    </view>
-    
+
+      <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
+        <input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中" />
+
+      </view>
+
 
     </view>
 
     <view class="padding-sm">
-       <view class="padding flex flex-direction">
-          <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round "  data-class="fade" bindtap="stepTwoHandle">
-              <text class="cuIcon-right"></text>
-              <text>下一步</text>
-           </button>
-         </view>
+      <view class="padding flex flex-direction">
+        <button class="cu-btn bg-gradual-red animation-{{animation=='fade1'?'fade':''}} shadow round " data-class="fade" bindtap="stepTwoHandle">
+          <text class="cuIcon-right"></text>
+          <text>下一步</text>
+        </button>
+      </view>
     </view>
-  
+
   </view>
 
 
 
 
   <!--进货数量-->
-  <view wx:if="{{stepTwo==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;" >
-  <view style="height: {{height*0.8*0.3}}px; background-color: #eee;">
+  <view wx:if="{{stepTwo==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;">
+    <view style="height: {{height*0.8*0.3}}px; background-color: #eee;">
 
       <image src="/images/bg4.jpg" style="height: 100%; width: 100%;"></image>
       <view style="height:{{height*0.8*0.1}}px; width: 70%;background-color: white;margin: auto auto; margin-top: -{{height*0.8*0.1*1.2}}px;z-index: 1; color: #2fcabb;display: flex;align-items: center;justify-content: center;border-radius: 5px;position:relative;z-index:1;">请输入进货数量</view>
@@ -79,19 +79,19 @@
 
     <view style="height:{{height*0.6*0.2}}px; width: 70%;background-color: white;margin: auto auto;margin-top:25px;border-radius: 5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
 
-    <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
-    <input class="weui-input" type="number" placeholder="这是一个数字输入框" />
-    </view>
+      <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
+        <input class="weui-input" type="number" placeholder="这是一个数字输入框" />
+      </view>
     </view>
 
 
     <view class="padding-sm">
-       <view class="padding flex flex-direction">
-          <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round "  data-class="fade" bindtap="stepThreeHandle">
-              <text class="cuIcon-right"></text>
-              <text>下一步</text>
-           </button>
-         </view>
+      <view class="padding flex flex-direction">
+        <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round " data-class="fade" bindtap="stepThreeHandle">
+          <text class="cuIcon-right"></text>
+          <text>下一步</text>
+        </button>
+      </view>
     </view>
   </view>
 
@@ -100,7 +100,7 @@
 
 
   <!--商品单价-->
-  <view wx:if="{{stepThree==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;" >
+  <view wx:if="{{stepThree==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;">
     <view style="height: {{height*0.8*0.3}}px; background-color: #eee;">
 
       <image src="/images/bg5.jpg" style="height: 100%; width: 100%;"></image>
@@ -109,35 +109,35 @@
 
     <view style="height:{{height*0.6*0.2}}px; width: 70%;background-color: white;margin: auto auto;margin-top:25px;border-radius: 5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
 
-    <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
-     
-    <input class="weui-input" type="digit" placeholder="带小数点的数字键盘"/>
-      
+      <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
+
+        <input class="weui-input" type="digit" placeholder="带小数点的数字键盘" />
+
+      </view>
     </view>
+
+
+
+
+    <view class="padding-sm">
+      <view class="padding flex flex-direction">
+        <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round " data-class="fade" bindtap="querenjinhuo" data-target="DialogModal1">
+
+          <text>确认进货</text>
+        </button>
+      </view>
     </view>
-    
-    
-
-
-  <view class="padding-sm">
-       <view class="padding flex flex-direction">
-          <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round "  data-class="fade" bindtap="querenjinhuo" data-target="DialogModal1">
-            
-              <text>确认进货</text>
-           </button>
-         </view>
-  </view>
 
 
 
-  <view class="padding-sm">
-       <view class="padding flex flex-direction">
-          <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round "  data-class="fade" bindtap="quxiaojinhuo">
-            
-              <text>取消进货</text>
-           </button>
-         </view>
-  </view>
+    <view class="padding-sm">
+      <view class="padding flex flex-direction">
+        <button class="cu-btn bg-gradual-red animation-{{animation=='fade'?'fade':''}} shadow round " data-class="fade" bindtap="quxiaojinhuo">
+
+          <text>取消进货</text>
+        </button>
+      </view>
+    </view>
 
 
   </view>
@@ -158,13 +158,13 @@
     <view class="padding-xl">
       <image src="https://image.weilanwl.com/gif/rhomb-white.gif" mode="aspectFit" class="gif-white response" style="height:240rpx"></image>
     </view>
-    
+
 
 
     <view class="cu-bar bg-white justify-end">
       <view class="action">
-        
-        
+
+
 
       </view>
     </view>
@@ -173,20 +173,20 @@
 
 
 
-<view wx:if="{{stepFour==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;" >
+<view wx:if="{{stepFour==true}}" style="height:{{height*0.82}}px;width:100%;background-color: #f8f8f8;">
   <view style="height: {{height*0.8*0.3}}px; background-color: #eee;">
 
-      <image src="/images/bg4.jpg" style="height: 100%; width: 100%;"></image>
-      <view style="height:{{height*0.8*0.1}}px; width: 70%;background-color: white;margin: auto auto; margin-top: -{{height*0.8*0.1*1.2}}px;z-index: 1; color: #2fcabb;display: flex;align-items: center;justify-content: center;border-radius: 5px;position:relative;z-index:1;">进货成功！</view>
-    </view>
+    <image src="/images/bg4.jpg" style="height: 100%; width: 100%;"></image>
+    <view style="height:{{height*0.8*0.1}}px; width: 70%;background-color: white;margin: auto auto; margin-top: -{{height*0.8*0.1*1.2}}px;z-index: 1; color: #2fcabb;display: flex;align-items: center;justify-content: center;border-radius: 5px;position:relative;z-index:1;">进货成功！</view>
+  </view>
 
-    <view style="height:{{height*0.6*0.2}}px; width: 70%;background-color: white;margin: auto auto;margin-top:25px;border-radius: 5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+  <view style="height:{{height*0.6*0.2}}px; width: 70%;background-color: white;margin: auto auto;margin-top:25px;border-radius: 5px;display: flex;flex-direction: column;align-items: center;justify-content: center;">
 
     <view style="position:relative;border: 1px solid lightgray;border-radius: 5px;margin-top: 20px;height: 40%;width:80%">
-    
-    </view>
-    </view>
 
-
-    
+    </view>
   </view>
+
+
+
+</view>

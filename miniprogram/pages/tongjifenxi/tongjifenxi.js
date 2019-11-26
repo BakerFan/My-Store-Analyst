@@ -5,8 +5,8 @@ Page({
    */
   data: {
     nameIndex: null,
-    pickerIndex:null,
-    picker: ['表格','柱状图', '折线图'],
+    pickerIndex: null,
+    picker: ['表格', '柱状图', '折线图'],
     name: ['aaa', 'bbb', 'ccc'],
     date1: '2018-12-25',
     date2: '2018-12-25',
@@ -16,56 +16,56 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
 
@@ -95,15 +95,14 @@ Page({
     })
   },
 
-  chakantongjitu: function (e) 
-  {
+  chakantongjitu: function(e) {
     console.log(e);
     var anmiaton1 = e.currentTarget.dataset.class;
     var that = this;
     that.setData({
       animation: anmiaton1
     })
-    setTimeout(function () {
+    setTimeout(function() {
       that.setData({
         animation: ''
       })

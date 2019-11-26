@@ -1,5 +1,5 @@
 <cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
-<view slot="backText">返回</view>
+  <view slot="backText">返回</view>
   <view slot="content">统计分析</view>
 </cu-custom>
 
@@ -7,41 +7,41 @@
 
 
 <view class="cu-form-group margin-top">
-		<view class="title">商品名称</view>
-		<picker bindchange="NameChange" value="{{nameIndex}}" range="{{name}}">
-			<view class="picker">
-				{{nameIndex?name[nameIndex]:'请选择商品名称'}}
-			</view>
-		</picker>
+  <view class="title">商品名称</view>
+  <picker bindchange="NameChange" value="{{nameIndex}}" range="{{name}}">
+    <view class="picker">
+      {{nameIndex?name[nameIndex]:'请选择商品名称'}}
+    </view>
+  </picker>
 </view>
 
 
 
 <view class="cu-form-group margin-top">
-		<view class="title">图表类型</view>
-		<picker bindchange="PickerChange" value="{{pickerIndex}}" range="{{picker}}">
-			<view class="picker">
-				{{pickerIndex?picker[pickerIndex]:'请选择图表类型'}}
-			</view>
-		</picker>
+  <view class="title">图表类型</view>
+  <picker bindchange="PickerChange" value="{{pickerIndex}}" range="{{picker}}">
+    <view class="picker">
+      {{pickerIndex?picker[pickerIndex]:'请选择图表类型'}}
+    </view>
+  </picker>
 </view>
 
 <view class="cu-form-group">
-		<view class="title">起始日期</view>
-		<picker mode="date" value="{{date1}}" start="2015-09-01" end="2020-09-01" bindchange="Date1Change">
-			<view class="picker">
-				{{date1}}
-			</view>
-		</picker>
+  <view class="title">起始日期</view>
+  <picker mode="date" value="{{date1}}" start="2015-09-01" end="2020-09-01" bindchange="Date1Change">
+    <view class="picker">
+      {{date1}}
+    </view>
+  </picker>
 </view>
 
 <view class="cu-form-group">
-		<view class="title">终止日期</view>
-		<picker mode="date" value="{{date2}}" start="2015-09-01" end="2020-09-01" bindchange="Date2Change">
-			<view class="picker">
-				{{date2}}
-			</view>
-		</picker>
+  <view class="title">终止日期</view>
+  <picker mode="date" value="{{date2}}" start="2015-09-01" end="2020-09-01" bindchange="Date2Change">
+    <view class="picker">
+      {{date2}}
+    </view>
+  </picker>
 </view>
 
 <view class="cu-bar bg-white margin-top">
@@ -62,9 +62,9 @@
 
 <view class="padding-sm">
   <view class="padding flex flex-direction">
-    <button class="cu-btn bg-gradual-red animation-{{animation=='scale1'?'scale-up':''}} shadow round "  data-class="scale1" bindtap="chakantongjitu">
-    <text class="cuIcon-sort"></text>
-    <text>查看统计图</text>
+    <button class="cu-btn bg-gradual-red animation-{{animation=='scale1'?'scale-up':''}} shadow round " data-class="scale1" bindtap="chakantongjitu">
+      <text class="cuIcon-sort"></text>
+      <text>查看统计图</text>
     </button>
   </view>
 </view>

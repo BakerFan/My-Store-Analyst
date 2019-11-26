@@ -3,7 +3,7 @@
 .pro-title{
 padding:20rpx 28rpx 0rpx;
   background-color:#fff;
-  color:#1cbbb4;
+  color:#fa542a;
   text-align: center;
 }
 .sizep{
