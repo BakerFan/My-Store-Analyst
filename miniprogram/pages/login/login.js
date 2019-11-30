@@ -103,11 +103,20 @@ Page({
   // 登录
   login: function() {
     if (this.data.userID.length == 0 || this.data.password.length == 0) {
-      wx.showToast({
-        title: '用户名和密码不能为空',
-        icon: 'loading',
-        duration: 2000
-      })
+      if (this.data.userID.length == 0)
+      {
+        wx.showToast({
+          title: '用户名不能为空',
+          icon: 'loading',
+          duration: 2000
+        })}
+        else{
+        wx.showToast({
+          title: '密码不能为空',
+          icon: 'loading',
+          duration: 2000
+        })
+        }
     } else if (this.data.userID == this.data.userID1) {
       wx.navigateTo({
         url: '/pages/index/index',

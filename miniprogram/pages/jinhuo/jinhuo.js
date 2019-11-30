@@ -14,9 +14,6 @@ Page({
     stepFour: false,
     scroll: false,
 
-
-
-
     toggleDelay: false
   },
 
