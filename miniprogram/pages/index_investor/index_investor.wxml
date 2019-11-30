@@ -3,10 +3,19 @@
   <view slot="content">销售情况查询</view>
 </cu-custom>
 
+
 <image class="background-image" src="/images/background1.jpg"></image>
+
+<cu-custom bgColor="bg-gradual-orange" isBack="{{false}}">
+  <view slot="content">My Store Analyst</view>
+</cu-custom>
+
 
 
 <view class="container">
+
+
+
   <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
     <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
       <view class="swiper-item">
@@ -15,24 +24,30 @@
       </view>
     </swiper-item>
   </swiper>
+
+
+
+
+
+
 </view>
 
+
+
+
+
+
+
+
+
 <view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
+  <text class="text-black text-xl">欢迎，</text>
+  <text class="text-black text-xl">{{userID}} </text>
+  <text class="text-black text-xl">你的身份是：投资商</text>
 </view>
 <view class="cu-bar">
   <view class="action">
 
-  </view>
-</view>
-
-
-<view class="padding-sm">
-  <view class="padding flex flex-direction">
-    <button class="cu-btn bg-gradual-red animation-{{animation=='scale1'?'scale-up':''}} shadow round " data-class="scale1" bindtap="chakanjilu">
-      <text class="cuIcon-sort"></text>
-      <text>销售登记</text>
-    </button>
   </view>
 </view>
 

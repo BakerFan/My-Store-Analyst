@@ -6,47 +6,49 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
+    //motto: '欢迎，{{userID}} 你的身份是：售货员',
     userInfo: {},
-    //motto: '欢迎，{{userID}} 你的身份是：店主',
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+
+
 
     cardCur: 0,
     swiperList: [{
       id: 0,
       type: 'image',
-      src:'/images/summer1.jpg'
-     
+      src: '/images/summer1.jpg'
+
     }, {
       id: 1,
       type: 'image',
       src: '/images/summer2.jpg'
-      
+
     }, {
       id: 2,
       type: 'image',
       src: '/images/summer3.jpg'
-     
+
     }, {
       id: 3,
       type: 'image',
       src: '/images/summer4.jpg'
-      
+
     }, {
       id: 4,
       type: 'image',
       src: '/images/summer4.jpg'
-      
+
     }, {
       id: 5,
       type: 'image',
       src: '/images/spring1.jpg'
-      
+
     }, {
       id: 6,
       type: 'image',
       src: '/images/spring2.jpg'
-      
+
     }],
 
 

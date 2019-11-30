@@ -3,7 +3,7 @@
   <view slot="content">统计分析</view>
 </cu-custom>
 
-<image class="background-image" src="/images/background1.jpg"></image>
+
 
 
 <view class="cu-form-group margin-top">

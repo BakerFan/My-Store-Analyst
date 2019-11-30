@@ -6,47 +6,49 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
+    //motto: '欢迎，{{userID}} 你的身份是：投资商',
     userInfo: {},
-    //motto: '欢迎，{{userID}} 你的身份是：店主',
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+
+
 
     cardCur: 0,
     swiperList: [{
       id: 0,
       type: 'image',
-      src:'/images/summer1.jpg'
-     
+      src: '/images/summer1.jpg'
+
     }, {
       id: 1,
       type: 'image',
       src: '/images/summer2.jpg'
-      
+
     }, {
       id: 2,
       type: 'image',
       src: '/images/summer3.jpg'
-     
+
     }, {
       id: 3,
       type: 'image',
       src: '/images/summer4.jpg'
-      
+
     }, {
       id: 4,
       type: 'image',
       src: '/images/summer4.jpg'
-      
+
     }, {
       id: 5,
       type: 'image',
       src: '/images/spring1.jpg'
-      
+
     }, {
       id: 6,
       type: 'image',
       src: '/images/spring2.jpg'
-      
+
     }],
 
 
@@ -104,26 +106,8 @@ Page({
       })
     }
   },
-  qujinhuo: function(e) {
-    console.log(e);
-    var anmiaton1 = e.currentTarget.dataset.class;
-    var that = this;
-    that.setData({
-      animation: anmiaton1
-    })
-    setTimeout(function() {
-      that.setData({
-        animation: ''
-      })
-    }, 1000)
 
-    wx.navigateTo({
-      url: '/pages/jinhuo/jinhuo',
-    })
-  },
-
-
-  xiaoshouchaxun: function(e) {
+  chakanfenxi: function(e) {
     console.log(e);
     var anmiaton2 = e.currentTarget.dataset.class;
     var that = this;
@@ -136,10 +120,12 @@ Page({
       })
     }, 1000)
     wx.navigateTo({
-      url: '/pages/xiaoshou/xiaoshou',
+      url: '/pages/tongjifenxi/tongjifenxi',
     })
 
   },
+
+
 
   cardSwiper(e) {
     this.setData({
